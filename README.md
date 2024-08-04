@@ -1,27 +1,65 @@
-# FrontendTask
+# Frontend Developer Task
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
+## Project Overview
 
-## Development server
+Welcome to the Frontend Developer Task! This project is designed to evaluate your skills in Angular, TypeScript, HTML, and CSS/SCSS. You will create a simple to-do list application that allows users to add, mark as complete, and delete tasks.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Task Requirements
 
-## Code scaffolding
+1. **Create a To-Do List Application:**
+   - The application should allow users to add new tasks.
+   - Each task should have a title and a description.
+   - Users should be able to mark tasks as complete.
+   - Users should be able to delete tasks.
+   - The list of tasks should be persisted in the browser's local storage so that the tasks remain even after a page refresh.
+   - No authentication is required.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. **Code Quality:**
+   - Follow best practices for Angular development.
+   - Write clean, readable, and maintainable code.
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. **Clone the repository:**
 
-## Running unit tests
+    ```bash
+    git clone <repository_url>
+    cd frontend-task
+    ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. **Install dependencies:**
 
-## Running end-to-end tests
+    ```bash
+    npm install
+    ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. **Run the application:**
 
-## Further help
+    ```bash
+    ng serve
+    ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. **Open the application in your browser:**
+
+    Navigate to `http://localhost:4200`.
+
+## Submission
+
+1. **Complete the task as described above.**
+2. **Push your code to a new branch named `submission` in the repository.**
+
+## Evaluation Criteria
+
+Your submission will be evaluated based on the following criteria:
+
+1. **Functionality:** Does the application meet all the requirements?
+2. **Code Quality:** Is the code clean, readable, and maintainable?
+3. **UI/UX:** Is the application visually appealing and user-friendly?
+
+Good luck!
+
+---
+
+## Additional Instructions
+
+If you have any questions or need further clarification, feel free to reach out. We are looking forward to seeing your work!
