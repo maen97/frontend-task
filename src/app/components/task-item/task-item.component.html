@@ -1,0 +1,16 @@
+<div class="task-item card" [class.completed]="task.completed">
+  <div class="task-content">
+    <h3>{{ task.title }}</h3>
+    <p *ngIf="task.description">{{ task.description }}</p>
+  </div>
+  <div class="task-actions">
+    <button
+      class="btn btn-complete"
+      [class.completed]="task.completed"
+      (click)="onToggleComplete()"
+    >
+      {{ task.completed ? "Undo" : "Complete" }}
+    </button>
+    <button class="btn btn-delete" (click)="onDelete()">Delete</button>
+  </div>
+</div>

@@ -1,11 +1,66 @@
+@import "../styles/variables";
+
+.container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: $spacing-l $spacing-m;
+}
+
+.app-container {
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(45deg, $accent-color, $text-color);
+        border-radius: 50%;
+        filter: blur(60px);
+        z-index: -1;
+        opacity: 0.5;
+    }
+
+    &::before {
+        top: -100px;
+        right: -100px;
+        width: 200px;
+        height: 200px;
+    }
+
+    &::after {
+        bottom: -100px;
+        left: -100px;
+        width: 250px;
+        height: 250px;
+    }
+}
+
 h1 {
+    color: $text-color;
     text-align: center;
-    font-size: 3.5rem;
-    background-clip: text;
-    background-image: linear-gradient(130deg, #54c8fa 30%, #be1cfa 70%);
-    font-weight: 700;
-    padding-left: .5rem;
-    padding-right: .25em;
-    -webkit-text-fill-color: #0000;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-xl;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, $accent-color, $text-color);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+        transform-origin: right;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
 }

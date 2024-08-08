@@ -1,18 +1,33 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GlobalErrorHandler } from './error-handling/global-error-handler';
+import {
+  TaskFormComponent,
+  TaskListComponent,
+  TaskItemComponent,
+  MessageComponent,
+} from '@app/components';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TaskListComponent,
+    TaskFormComponent,
+    TaskItemComponent,
+    MessageComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [{ provide: ErrorHandler, useClass: GlobalErrorHandler }],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,0 +1,45 @@
+@import "../../../styles/variables";
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &.completed .task-content {
+        text-decoration: line-through;
+        color: $text-secondary;
+    }
+
+    .task-content {
+        flex-grow: 1;
+        margin-right: $spacing-m;
+    }
+
+    .task-actions {
+        display: flex;
+        gap: $spacing-s;
+    }
+
+    .btn-complete {
+        background-color: $success-color;
+        color: $text-color;
+
+        &:hover {
+            background-color: darken($success-color, 10%);
+        }
+
+        &.completed {
+            background-color: $warning-color;
+            &:hover {
+                background-color: darken($warning-color, 10%);
+            }
+        }
+    }
+
+    .btn-delete {
+        background-color: $accent-color;
+        &:hover {
+            background-color: darken($accent-color, 10%);
+        }
+    }
+}

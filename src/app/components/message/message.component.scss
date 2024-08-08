@@ -1,0 +1,32 @@
+@import "../../../styles/variables";
+
+.message {
+    position: fixed;
+    top: $spacing-l;
+    left: $spacing-l;
+    z-index: 1000;
+    background-color: $secondary-bg;
+    color: $text-color;
+    padding: $spacing-m;
+    border-left: 4px solid $accent-color;
+    border-radius: $border-radius;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    animation: slideInOut 3s ease-in-out;
+}
+
+@keyframes slideInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    10%,
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}

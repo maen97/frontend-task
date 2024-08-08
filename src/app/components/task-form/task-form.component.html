@@ -1,0 +1,30 @@
+<div class="motivation-quote">
+  <p>{{ quote }}</p>
+</div>
+
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="task-form card">
+  <input
+    type="text"
+    formControlName="title"
+    class="input"
+    placeholder="What's the task, buddy?"
+  />
+  <div
+    class="details-container"
+    [@detailsExpand]="showDetails ? 'expanded' : 'collapsed'"
+  >
+    <textarea
+      formControlName="description"
+      class="input"
+      placeholder="Add some details"
+    ></textarea>
+  </div>
+  <div class="form-actions">
+    <button type="button" class="btn btn-toggle" (click)="toggleDetails()">
+      {{ showDetails ? "▲" : "▼" }}
+    </button>
+    <button type="submit" class="btn btn-submit" [disabled]="taskForm.invalid">
+      Add To-Do
+    </button>
+  </div>
+</form>

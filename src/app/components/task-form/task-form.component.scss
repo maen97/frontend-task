@@ -1,0 +1,59 @@
+@import "../../../styles/variables";
+
+.task-form {
+    margin-bottom: $spacing-l;
+    position: relative;
+
+    .input {
+        margin-bottom: $spacing-m;
+        width: 100%;
+        padding: $spacing-m;
+        border: none;
+        border-radius: $border-radius;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: $text-color;
+        font-size: $font-size-base;
+
+        &::placeholder {
+            color: $text-secondary;
+        }
+    }
+
+    .details-container {
+        overflow: hidden;
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: $spacing-m;
+    }
+
+    .btn {
+        cursor: pointer;
+        z-index: 1;
+        position: relative;
+
+        &-toggle {
+            padding: $spacing-s $spacing-m;
+        }
+
+        &-submit {
+            padding: $spacing-s $spacing-l;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+}
+
+.motivation-quote {
+    text-align: center;
+    font-style: italic;
+    color: $text-secondary;
+    margin: $spacing-l 0;
+    padding: $spacing-m;
+    border-left: 3px solid $accent-color;
+}

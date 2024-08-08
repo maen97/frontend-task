@@ -1,0 +1,7 @@
+@import "../../../styles/variables";
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-m;
+}
